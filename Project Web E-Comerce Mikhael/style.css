@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+    --outline:.1rem solid rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background: #eee;
+}
+
+/* settingan bagian Section */
+section{
+    padding:20px 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 20px 0;
+    padding-bottom: 30px;
+    font-size: 35px;
+    color: var(--black);
+}
+
+/* setingan(custom nav bar) */
+.header{
+    position: fixed;
+    top: 0; left:0 ;right:0;
+    z-index: 1000;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    
+}
+
+/* nama logo (Mikhael Fresh Mart) */
+.header .logo{
+    font-size: 25px;
+    font-weight: bolder;
+    color:var(--black);
+}
+
+/* icon keranjang menjadi warna oren */
+.header .logo i{
+    color:var(--orange);
+}
+
+/* mengatur ukuran tulisan home about dll supaya lebih rapih  */
+.header .navbar a{
+    font-size: 17px;
+    margin:0 10px;
+    color: var(--black)
+    
+}
+
+/* membuat tulisan home about dll akan berwarna jika kursos diarahkan */
+.header .navbar a:hover{
+    color: var(--orange);
+}
+
+/* membuat tombol icon menu agar lebih rapih dan proposional */
+.header .icons div{
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    border-radius: 5px;
+    background:#eee ;
+    color: var(--black);
+    font-size: 20px;
+    margin-left: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* jika kursor di arahkan ke tombol icon , maka tombol akan timbul warna (oren) */
+.header .icons div:hover{
+    background: var(--orange);
+    color: #fff;
+}
+/* menonaktifkan supaya pakai form pencaharian */
+#menu-tombol{
+    display: none;
+}
+
+/* tombol pencarian */
+.header .pencarian-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    width: 500px;
+    height: 50px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items:center;
+    box-shadow: var(--box-shadow);
+}
+
+/* custom yg di dalam kotak pencarian untuk input */
+.header .pencarian-form input{
+    height: 100%;
+    width: 95%;
+    background: none;
+    text-transform:none;
+    font-size: 16px ;
+    color:var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .pencarian-form.active{
+    right:2rem;
+    transition: .2s linear;
+}
+
+/* logo pencarian custom */
+.header .pencarian-form label{
+    font-size: 2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .pencarian-form label:hover{
+    color:var(--orange)
+}
+
+/* ukuran Kotak */
+.header .shopping-cart{
+    position: absolute;
+    top: 110%; right: -110%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    width: 350px;
+    background: #fff;
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+/* merapihkan huruf */
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin: 10px 0;
+}
+
+/* membungkus gambar supaya lebih kecil */
+.header .shopping-cart .box img{
+    height: 100px;
+
+}
+
+/* logo tempat sampah adjust */
+.header .shopping-cart .box .fa-trash{
+    font-size: 20px;
+    position: absolute;
+    top: 50%; right: 20px;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);
+}
+
+/* supaya saat di klik trash berwarna oren */
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--orange);
+}
+
+/* setting ukuran nama barang yg d jual contoh (ayam,bawang merah semangka) */
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+}
+ 
+/* setting ukuran harga */
+.header .shopping-cart .box .content span{
+    color: var(--light-color);
+    font-size: 16px;
+}
+
+/* setting kuantitas */
+.header .shopping-cart .box .content .kuantitas{
+    padding-left: 10px;
+}
+
+/* setting total harga */
+.header .shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 10px;
+    text-align: center;
+    color: var(--black);
+}
+
+/* setting posisi check out , dan buat kotak check out */
+/* kalau error , berarti nnti pakai .btn ajaa */
+.tbl{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+/* untuk menimbulkan warna saat kursor di arahkan ke tombol check out */
+.tbl:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+/* untuk merapihkan setinan tombol chechk out */
+.header .shopping-cart .tbl{
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* posisi Tampilan Menu login */
+.header .login-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    width:300px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+}
+
+/* untuk memanggil login form yg ada di java scrip supaya muncul ketika icon di klik */
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+/* settingan tulisan Login(judul) */
+.header .login-form h3{
+    font-size: 25px;
+    text-transform:uppercase;
+    color: var(--black);
+}
+
+/* setingan Huruf di Login dan password */
+.header .login-form .box{
+    width: 100%;
+    margin: 7px 0;
+    background: #eee;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--black);
+    text-transform: none;
+}
+
+/* settingan buat kata sandi dan membuat akun */
+.header .login-form p{
+    font-size: 14px;
+    padding: 5px 0;
+    color: var(--light-color);
+}
+
+/* settingan klik disini */
+.header .login-form p a{
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+/* BAGIAN SECTION */
+
+
+/* setting gambar */
+.beranda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(file:///F:/Project%20Web%20E-COMERCE/Project%20Web%20E-Comerce%20Mikhael/image/banner-bg.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top:170px;
+    padding-bottom: 100px;
+}
+
+/* setting tulisan segar alami dan tombol */
+.beranda .content{
+    text-align: center;
+    width: 600px;
+
+}
+
+/* setting h3 tulisan */
+.beranda .content h3{
+    color: var(--black);
+    font-size: 30px;
+}
+
+.beranda .content h3 span{
+    color:var(--orange)
+}
+
+.beranda .content p{
+    color: var(--light-color);
+    font-size: 17px;
+    padding: 10px 0;
+}
+
+
+
+/* BAGIAN FITUR */
+
+.heading span{
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: 5px 90px;
+    clip-path:polygon(100% 0,93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+
+}
+
+/* mengatur posisi fitur segar ongkir dan biayay murah */
+.fitur .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 15px;
+}
+
+/* menambahkan bingkai garis */
+.fitur .box-container .box{
+    padding: 30px 20px;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -10px;
+    text-align:center;
+    box-shadow: var(--box-shadow);
+    
+}
+
+/* agar bingkai garis nya timbul jika kursor di arahkan */
+.fitur .box-container .box:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0px;
+}
+
+/* merapihkan letak gambar  */
+.fitur .box-container .box img{
+    margin: 10px 0;
+    height: 150px;
+}
+
+.fitur .box-container .box h3{
+    font-size: 25px;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+.fitur .box-container .box p{
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--light-color);
+    padding: 10px;
+    }
+
+
+
+
+
+/* BAGIAN PRODUK */
+
+.produk .geser-produk{
+    padding: 10px;
+}
+
+.produk .geser-produk:first-child{
+    margin-bottom: 20px;
+}
+
+.produk .geser-produk .box{
+    background: #fff;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 30px 20px;
+    outline-offset: -10px;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.produk .geser-produk .box:hover{
+    outline-offset: 0px;
+    outline: var(--outline-hover);
+}
+
+.produk .geser-produk .box img{
+    height: 170px;
+}
+
+.produk .geser-produk .box h3{
+    font-size: 25px;
+    color: var(--black);
+}
+
+.produk .geser-produk .box .price{
+    font-size: 20px;
+    color: var(--light-color);
+    padding: 5px 0;
+
+}
+
+.produk .geser-produk .box .bintang i{
+    font-size: 17px;
+    color: var(--orange);
+    padding: 5px 0;
+}
+
+
+
+
+/* Kategori*/
+section .heading{
+    padding-bottom:60px;
+}
+.kategori .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 15px;
+}
+
+.kategori .box-container .box{
+    padding: 30px 20px;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -10px;
+    text-align:center;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+
+.kategori .box-container .box:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0px;
+}
+
+.kategori .box-container .box img{
+    height: 150px;
+    margin: 10px 0;
+}
+
+.kategori .box-container .box h3{
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+.kategori .box-container .box p{
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--light-color);
+    padding: 10px 0;
+    }
+
+
+
+
+/* TESTIMONI */
+
+
+.testimoni .testimoni-slider{
+    padding:10px;
+
+}
+
+.testimoni .testimoni-slider .box{
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 20px;
+    outline-offset: -10px;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.testimoni .testimoni-slider .box:hover{
+    outline:var(--outline-hover);
+    outline-offset: 0px;
+}
+
+.testimoni .testimoni-slider .box img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.testimoni .testimoni-slider .box p{
+    padding: 10px 0;
+    line-height: 28px;
+    color: var(--light-color);
+    font-size: 15px;
+}
+
+.testimoni .testimoni-slider .box h3{
+    padding-bottom: 5px;
+    color: var(--black);
+    font-size: 22px;
+}
+
+.testimoni .testimoni-slider .box .bintang i{
+    color:var(--orange);
+    font-size: 17px;
+}
+
+
+
+/* Bagian Blog */
+
+.blog .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 15px;
+}
+
+.blog .box-container .box{
+    background: #fff;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+
+.blog .box-container .box img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.blog .box-container .box .content{
+    padding: 20px;
+}
+
+.blog .box-container .box .content .icons{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: var(--border);
+    
+}
+
+.blog .box-container .box .content a{
+    color: var(--light-color);
+    font-size: 15px;
+}
+
+.blog .box-container .box .content a:hover{
+    color: var(--black);
+}
+
+.blog .box-container .box .content i{
+    color: var(--orange);
+    padding-right: 5px;
+}
+
+.blog .box-container .box .content h3{
+    line-height: 1.8;
+    color: var(--black);
+    font-size: 22px;
+    padding: 5px 0;
+}
+
+.blog .box-container .box .content p{
+    line-height: 1.8;
+    color: var(--light-color);
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+
+
+/* FOOTEER START */
+
+.footer{
+    background: #fff;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .kotak h3{
+    font-size: 25px;
+    color: var(--black);
+    padding: 10px 0;
+}
+
+.footer .box-container .kotak i{
+    color: var(--orange);
+}
+
+.footer .box-container .kotak .link{
+    display:block;
+    font-size: 10px;
+    color: var(--light-color);
+    
+}
+
+.footer .box-container .kotak .bagikan a{
+    height: 140px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: .5rem;
+    }
+
+.footer .box-container .kotak .link i{
+    color: var(--orange);
+    padding-right: 40px;
+}
+
+.footer .box-container .kotak .link:hover i{
+    padding-right: 20px;
+}
+.footer .box-container .kotak p{
+    line-height: 1.8;
+}
+
+.footer .box-container .kotak .bagikan a{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: var(--black);
+    margin-left: 2px;
+    background: #eee;
+    text-align:  center;
+
+    
+}
+
+.footer .box-container .kotak .bagikan a:hover{
+    height: 40px;
+    color: #fff;
+
+    
+} 
+
+.footer .box-container .kotak .email{
+    margin:7px;
+    padding: 10px;
+    border-radius: .5px;
+    background:#eee;
+    font-size: 16px;
+    color: var(--black);
+    text-transform: none;
+
+
+}
+
+.footer .box-container .kotak .pembayaran{
+    margin-top: 9rem;
+    height: 3rem;
+
+    
+}
+
+.footer .credit{
+    text-align: center;
+    margin-top: 1rem;
+    padding: 10px;
+    padding-top: 25px;
+    font-size: 20px;
+    color: var(--black);
+    border-top: var(--border);
+}
+
+.footer .credit span{
+    color: var(--orange);
+}
+/* media queries */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 10px;
+    }
+    section{
+        padding:20px ;
+    }
+}
+
+@media (max-width:768px){
+
+    #menu-tombol{
+        display: inline-block;
+    }
+
+    .header .pencarian-form{
+        width: 90%;
+    }
+    
+    .header .shopping-cart{
+        width: 80%;
+        margin: 25px ;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 300px;
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        background:#fff;
+    }
+
+    .header .navbar.active{
+        right: 20px;
+        transition: .4s linear;
+    }
+    .header .navbar a{
+        font-size: 20px;
+        margin: 20px 25px;
+        display: block;
+    }
+}
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 25px;
+    }
+    .footer{
+        text-align: center;
+    }
+}

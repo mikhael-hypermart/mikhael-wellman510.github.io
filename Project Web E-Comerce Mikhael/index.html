@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikhael Fresh Mart</title>
+
+    <!-- swipper from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+/>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Custome file css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header atas -->
+<header class="header">
+    <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> Mikhael Fresh Mart </a>
+
+    <nav class="navbar">
+        <a href="#beranda">beranda</a>
+        <a href="#fitur">fitur</a>
+        <a href="#produk">produk</a>
+        <a href="#kategori">kategori</a>
+        <a href="#testimoni">testimoni</a>
+        <a href="#blog">blog</a>
+    </nav>
+
+    <!-- tombol - tombol -->
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-tombol"></div> 
+        <div class="fas fa-search" id="pencarian-tombol"></div>
+        <div class="fas fa-shopping-cart" id="keranjang-tombol"></div>
+        <div class="fas fa-user" id="login-tombol"></div>
+    </div>
+    
+    <!-- input type untuk membuat form search ,  -->
+    <form action="" class="pencarian-form">
+        <input type="search" id="pencarian-box" placeholder="Temukan disini...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="image/cart-img-1.png" alt="">
+            <div class="content">
+                <h3>Semangka</h3>
+                <span class="harga">Rp.20.000</span>
+                <span class="kuantitas">per-Kg</span>
+            </div>
+        </div>
+            
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="image/cart-img-2.png" alt="">
+            <div class="content">
+                <h3>Bawang Merah</h3>
+                <span class="harga">Rp.40.000</span>
+                <span class="kuantitas">per-Kg</span>
+            </div>
+        </div>
+                
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="image/cart-img-3.png" alt="">
+            <div class="content">
+                <h3>Ayam Broiler</h3>
+                <span class="harga">Rp.40.000</span>
+                <span class="kuantitas">per-Kg</span>
+            </div>
+        </div>
+        <div class="total"> Total : Rp.50.000 </div>
+        <a href="#" class="tbl">Check Out</a>
+    </div>
+
+    <form action="" class="login-form">
+        <h3>Login Now</h3>
+        <input type="email" placeholder="Masukan Email Anda" class="box">
+        <input type="password" placeholder="Masukan Password Anda" class="box">
+        <p>Lupa Kata Sandi ?<a href="#">Klik Disini</a></p>
+        <p>Belum Mempunyai akun ?<a href="#">Buat Sekarang</a></p>
+        <input type="submit" value="login now" class="tbl">
+    </form>
+</header>
+
+<!-- header bawah -->
+
+
+<!-- beranda section mulai -->
+
+<section class="beranda" id="beranda">
+    
+    <div class="content">
+        <h3>Segar dan <span>Alami</span> Produk Untuk Anda</h3>
+        <p>Mikhael Fresh Mart Menyediakan produk Daging & Sayuran yang sangat sehat dan berkualitas untuk memenuhi kebutuhan gizi anda.<br><i><b> "alami dan bebas bahan kimia"</b></i><br></p>
+        <a href="#" class="tbl">beli sekarang</a>
+    </div>
+
+</section>
+
+<!-- beranda section dah kelar -->
+
+
+<!-- Fitur dimulai , semangat -->
+<section class="fitur" id="fitur">
+    <h1 class="heading">Fitur <span>Kami</span></h1>
+    
+    <div class="box-container">
+       
+        <div class="box">
+            <img src="image/feature-img-1.png" alt="">
+            <h3>Segar dan Alami</h3>
+            <p>Mikhael Fresh Mart menjamin Sayuran yang kami sediakan segar, alami, dan bebas bahan kimia dan pengawet.</p>
+            <a href="#" class="tbl">Baca Selengkapnya</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-2.png" alt="">
+            <h3>Gratis Biaya Ongkir</h3>
+            <p>Mikhael Fresh Mart memberikan fasilitas Pengiriman barang  dengan biaya gratis untuk customer </p>
+            <a href="#" class="tbl">Baca Selengkapnya</a>
+        </div>
+
+        <div class="box">
+            <img src="image/feature-img-3.png" alt="">
+            <h3>Pembayaran Mudah</h3>
+            <p>Mikhael Fresh Mart menyediakan beberapa metode pembayaran sehingga mempermudah pelanggan dalam melakukan transaksi pembayaran</p>
+            <a href="#" class="tbl">Baca Selengkapnya</a>
+        </div>
+    </div>
+</section>
+
+<!-- FITUR DAH KELAR -->
+
+<!-- PRODUK SECTION  -->
+
+<section class="produk" id="produk">
+
+    <h1 class="heading">Produk<span>Kami</span></h1>
+    
+    <div class="swiper geser-produk">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide box">
+                <img src="image/product-1.png" alt="">
+                <h3>Jeruk Segar</h3>
+                <div class="price">Rp.15.000 - Rp.30.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-2.png" alt="">
+                <h3>Bawang Merah</h3>
+                <div class="price">Rp.35.000 - Rp.45.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-3.png" alt="">
+                <h3>Daging Segar</h3>
+                <div class="price">Rp.85.000 - Rp.110.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-4.png" alt="">
+                <h3>Sawi Segar</h3>
+                <div class="price">Rp.5.000 - Rp.15.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="swiper geser-produk">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide box">
+                <img src="image/product-5.png" alt="">
+                <h3>Kentang Segar</h3>
+                <div class="price">Rp.13.000 - Rp.30.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-6.png" alt="">
+                <h3>Alpukat Segar</h3>
+                <div class="price">Rp.20.000 - Rp.30.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-7.png" alt="">
+                <h3>Wortel Segar</h3>
+                <div class="price">Rp.8.000 - Rp.15.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-8.png" alt="">
+                <h3>Jeruk Nipis</h3>
+                <div class="price">Rp.5.000 - Rp.10.000</div>
+                <div class="bintang">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="tbl">Tambahkan Ke Keranjang</a>
+            </div>
+        
+        </div>
+    </div>
+
+</section>
+
+<!-- produk section dah beres -->
+
+<!-- bagian Kategori -->
+<section class="kategori" id="kategori">
+    <h1 class="heading"> Kategori <span>Produk</span></h1>
+    
+    <div class="box-container">
+        
+        <div class="box">
+            <img src="image/cat-1.png" alt="">
+            <h3>Sayuran Segar</h3>
+            <p>Diskon sampai 45%</p>
+            <a href="#" class="tbl">Belanja Sekarang</a>
+        </div>
+
+        <div class="box">
+            <img src="image/cat-2.png" alt="">
+            <h3>Buah Segar</h3>
+            <p>Diskon sampai 45%</p>
+            <a href="#" class="tbl">Belanja Sekarang</a>
+        </div>
+
+        <div class="box">
+            <img src="image/cat-3.png" alt="">
+            <h3>Produk Susu</h3>
+            <p>Diskon sampai 45%</p>
+            <a href="#" class="tbl">Belanja Sekarang</a>
+        </div>
+
+        <div class="box">
+            <img src="image/cat-4.png" alt="">
+            <h3>Daging Segar</h3>
+            <p>Diskon sampai 45%</p>
+            <a href="#" class="tbl">Belanja Sekarang</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- kategori section kelar -->
+
+<!-- testimoni section mulai -->
+
+<section class="testimoni" id="testimoni">
+
+    <h1 class="heading">Testimoni <span>Customer</span></h1>
+    
+    <div class="swiper testimoni-slider">
+        
+        <div class="swiper-wrapper">
+            
+        <div class="swiper-slide box">
+                <img src="image/mikhaelcuy.png" width="195" height="195" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam itaque eius quas nobis doloremque inventore pariatur corrupti mollitia officiis.</p>
+                <h3>Mikhael Wellman</h3>
+            <div class="bintang">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        
+        </div>
+
+        
+            
+        <div class="swiper-slide box">
+                <img src="image/jokowi.jpg"width="195" height="195" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam itaque eius quas nobis doloremque inventore pariatur corrupti mollitia officiis.</p>
+                <h3>Joko Widodo</h3>
+            <div class="bintang">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        
+            <div class="swiper-slide box">
+                <img src="image/messi.jpg" width="195" height="195"alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam itaque eius quas nobis doloremque inventore pariatur corrupti mollitia officiis.</p>
+                <h3>Lionel Messi</h3>
+            <div class="bintang">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        
+            <div class="swiper-slide box">
+                <img src="image/arieel.jpg"width="195" height="195" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error numquam itaque eius quas nobis doloremque inventore pariatur corrupti mollitia officiis.</p>
+                <h3>Ariel Tatum</h3>
+            <div class="bintang">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+
+
+<!-- Blog section di mulai-->
+
+<section class="blog" id="blog">
+
+    <h1 class="heading">Blog <span> Kami </span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/blog-1.jpg" alt="">
+            <div class="content">
+                
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> by user</a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 28 Mei 2022</a>
+                </div>
+                
+                <h3>Segar dan Alami,Buah dan Sayuran</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, at!</p>
+                <a href="#" class="tbl">Baca Selengkapnya</a>
+            
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/blog-2.jpg" alt="">
+            <div class="content">
+                
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> by user</a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 28 Mei 2022</a>
+                </div>
+                
+                <h3>Segar dan Alami, Buah dan Sayuran</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, at!</p>
+                <a href="#" class="tbl">Baca Selengkapnya</a>
+            
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="image/blog-3.jpg" alt="">
+            <div class="content">
+                
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> by user</a>
+                    <a href="#"> <i class="fas fa-calendar"></i> 28 Mei 2022</a>
+                </div>
+                
+                <h3>Segar dan Alami, Buah dan Sayuran</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, at!</p>
+                <a href="#" class="tbl">Baca Selengkapnya</a>
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer section dimulai -->
+
+<section class="footer">
+    
+    <div class="box-container">
+        
+        <div class="kotak">
+            <h3>groco <i class="fas fa-shopping-basket"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sequi.</p>
+            <div class="bagikan">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+    
+
+    
+        <div class="kotak">
+            <h3>Informasi Kontak</h3>
+            <a href="#" class="link"> <i class="fas fa-phone"></i> 0896 0540 1029 </a>
+            <a href="#" class="link"> <i class="fas fa-phone"></i> 0878 7889 0540 </a>
+            <a href="#" class="link"> <i class="fas fa-envelope"></i> mikhaelwellman28@gmail.com </a>
+            <a href="#" class="link"> <i class="fas fa-map-marker-alt"></i> Bumi Citra Kencana Blok F6 no 27.Kota Bogor.Jawa Barat </a>
+        </div>
+    
+
+    
+        <div class="kotak">
+            <h3>Link Cepat</h3>
+            <a href="#" class="link"> <i class="fas fa-arrow-right"></i>Beranda</a>
+            <a href="#" class="link"> <i class="fas fa-arrow-right"></i>Fitur</a>
+            <a href="#" class="link"> <i class="fas fa-arrow-right"></i>Produk</a>
+            <a href="#" class="link"> <i class="fas fa-arrow-right"></i>Kategori</a>
+            <a href="#" class="link"> <i class="fas fa-arrow-right"></i>testimoni</a>
+            <a href="#" class="link"> <i class="fas fa-arrow-right"></i>Blog</a>
+        </div>
+   
+
+
+        <div class="kotak">
+        <h3>Berita Baru</h3>
+        <p>Subscribe untuk berita terupdate</p>
+        <input type="email" placeholder="Your Email" class="email">
+        <input type="submit" value="subscribe" class="tbl">
+        <img src="image/payment.png" class="pembayaran" alt="">
+
+    </div>
+</div>
+
+<div class="credit"> Created by: <span> Mikhael Wellman </span> | all rights reserved</div>
+    
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- custom JS file Link -->
+    <script src="script.js"></script>
+</body>
+</html>
